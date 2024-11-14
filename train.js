@@ -1,0 +1,1 @@
+console.log("Train Arena ishga tushdi");
