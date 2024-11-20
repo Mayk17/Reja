@@ -15,7 +15,6 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin-top: 2px;
 }
 .main_frame .marginer {
@@ -38,14 +37,14 @@
   justify-content: center;
   align-items: center;
 }
-.left_1 .left_1_a {
+.left_1 .left_1a {
   position: relative;
   width: 156.16px;
   height: 142.53px;
   margin-bottom: 29.46px;
   display: flex;
   flex-direction: column;}
-.left_1 .left_1_b {
+.left_1 .left_1b {
     position: relative;
     width: 66.63px;
     height: 20.9px;
@@ -60,7 +59,7 @@
     align-items: center;
     text-transform: capitalize;
 }
-.left_1 .left_1_c {
+.left_1 .left_1c {
 position: relative;
 width: 147.84px;
 height: 25.65px;
@@ -132,7 +131,9 @@ color: #767676;
 
 /*#################################*/
 /*languages*/
-.main_frame .languages{
+
+
+.main_frame .languages {
   position: relative;
   width: 220px;
   height: 153px;
@@ -141,6 +142,12 @@ color: #767676;
   flex-direction: column;
   justify-content: space-between;
 }
+
+.label {
+  height: 22px;
+  width: 95px;
+}
+
 .label .sarlavha_1 {
   color: #2b2b2b;
   font-weight: 500;
@@ -149,10 +156,7 @@ color: #767676;
   letter-spacing: 0;
   line-height: 22.2px;
 }
-.label {
-  height: 22px;
-  width: 95px;
-}
+
 .languages_container {
   position: relative;
   display: flex;
@@ -191,32 +195,16 @@ color: #767676;
   height: 126px;
   margin-left: 44px;
 }
-  .right_frame {
-    position: relative;
-    width: 108px;
-    height: 1315px;
-    background-color: white;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-  }
+  /* extra skills*/
 
-.skill_container {
+.extra_skills_container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.skill_sub {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.skill_label {
+
+.extra_skills_label {
   color: #2b2b2b;
   font-weight: 500;
   font-family: "Inter-Medium", Helvetica;
@@ -224,8 +212,14 @@ color: #767676;
   letter-spacing: 0;
   line-height: 22.2px;
 }
-
-.my_extra_skill {
+.extra_skills_sub {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.my_extra_skills {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -243,6 +237,9 @@ color: #767676;
     font-weight: 400;
     line-height: 24px; /* 160% */
     text-transform: capitalize;
+}
+.skills_itself {
+  margin-left: 10px;
 }
 
 .midd_a { 
@@ -269,7 +266,8 @@ color: #767676;
   font-weight: 700;
   line-height: 60px;
   margin-bottom: 18px;
-  width: 500px;}
+  width: 500px;
+}
 
 .midd_2 {
 
@@ -345,14 +343,7 @@ color: #767676;
   left: 918px; 
 }
 
-
-
-.self_skill {
-  margin-left: 10px;
-}
-
-
-  body {
+ /* body {
     background-color: #e5e5e5;
   }
 
@@ -522,7 +513,7 @@ body {
     text-transform: capitalize;
     width: 260px;
 }
-order_now{
+.order_now{
   color: orange;
   display: flex;
   justify-content: center;
@@ -535,7 +526,7 @@ order_now{
   word-wrap: break-word;
   cursor: pointer;
 }
-.main_frame .right_frame {
+.right_frame {
   position: relative;
   width: 108px;
   height: 1315px;
@@ -604,5 +595,6 @@ order_now{
   width: 186px;
   height: 148px;
   margin-left: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  bottom: -40px;
 }
