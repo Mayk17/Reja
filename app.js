@@ -33,31 +33,44 @@ app.set("view engine", "ejs");
 
 // 4 Running code
 
-app.post("/create-item",(req, res) => {
-    console.log("user entered / create -item")
-    const new_reja =req.body.reja;
-    db.collection("plans").insertOne({reja: new_reja }, (err, data) => {
+
+app.post("/create-item", (req, res) => { 
+    console.log("user entered /create-item");
+    console.log(req.body);
+    const new_reja = req.body.reja;
+    db.collection("plans")
+    .insertOne({reja: new_reja}, (err, data) => {
         if (err) {
             console.log(err);
-            res.end ("something went wrong");
-        } else { 
-            res.end ("successfully added");
-        } 
-});
+            res.end('something went wrong');
+        } else {
+            res.end("successfuly added")
+        }
+    });
+
 });
 
-app.get ("/", function (req, res) {
+app.get("/author", (req, res) => {
+    res.render('author.ejs',{ user : user });
+});
+
+
+
+
+app.get("/", function (req, res) {
     console.log("user entered /");
     db.collection("plans")
     .find()
-    .toArray((err,data) => {
-        if (err) {
+    .toArray((err, data) => {
+        if(err) {
             console.log(err);
             res.end("something went wrong");
-        } else
-        console.log (data);
-        res.render("reja", {items: data});
-    }) 
+        }else {
+            
+            res.render("reja", { items : data});
+        }
+    });
+    
 });
 
 module.exports = app;
