@@ -1,14 +1,14 @@
-/* >>>>>>>>>>>>> TASK A >>>>>>>>>>>>>>>>*/
-/*function task (a, b){
-    const result= a + b;
-    return  result.length;
-
+/* >>>>>>>>>>>>> TASK b >>>>>>>>>>>>>>>>*/
+function countDigits(s) {
+    let count = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (!isNaN(s[i]) && s[i] !== ' ') {
+            count++;
+        }
+    }
+    return count;
 }
-const a= "aziz";
-const b= "ib";
-const natija = task(a, b);
-console.log(natija) */
-
+console.log(countDigits("ad2a54y79wet0sfgb9"));  // 
 
 /* >>>>>>>>>>>>>>>>CALLBACK function>>>>>>>>>>>>>>>>>>>>*/
 
