@@ -1,5 +1,5 @@
-/* >>>>>>>>>>>>> TASK A >>>>>>>>>>>>>>>>
-function task (a, b){
+/* >>>>>>>>>>>>> TASK A >>>>>>>>>>>>>>>>*/
+/*function task (a, b){
     const result= a + b;
     return  result.length;
 
@@ -7,11 +7,12 @@ function task (a, b){
 const a= "aziz";
 const b= "ib";
 const natija = task(a, b);
-console.log(natija)*/
+console.log(natija) */
 
 
 /* >>>>>>>>>>>>>>>>CALLBACK function>>>>>>>>>>>>>>>>>>>>*/
 
+/*
 console.log("Jack Ma maslahatlari");
 const list =[
     "yaxshi talaba bo'ling", //0-20
@@ -20,7 +21,7 @@ const list =[
     "siz kuchli bo'lgan narsalarni qiling", // 40-50
     "yoshlarga investitsiya qiling", // 50-60
     "endi dam oling, foydasi yoq endi", //60
-];
+]; */
 
  /*
  function maslahatBering(a, callback) {
@@ -116,7 +117,7 @@ console.log("passed here 1");
 
 /**>>>>>>>>>>>>>>>> Callback and Intervall>>>>>>>>>>>>>> */
    
- function maslahatBering(a, callback) {
+ /* function maslahatBering(a, callback) {
     if ( typeof a !== "number") callback("insert a number", null);
     else if ( a <= 20) callback(null,list[0]);
     else if ( a > 20 && a <= 30) callback(null,list[1]);
@@ -137,4 +138,10 @@ maslahatBering(65, (err, data,) => {
         console.log("javob:", data);
     }
 });
-console.log("passed here 1");
+console.log("passed here 1"); */
+
+
+
+
+
+// DEFINE
