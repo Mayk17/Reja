@@ -1,5 +1,84 @@
+
+
+/* >>>>>>>>>>>>> TASK C >>>>>>>>>>>>>>>>*/
+
+//const shop = new shop
+//shop.qoldiq();
+
+class Shop {
+    constructor(non, lagmon, cola) {
+        this.non = non;
+        this.lagmon = lagmon;
+        this.cola = cola;
+    }
+    qoldiq() {
+        const now = new Date();
+        const time = now.toLocaleString(); 
+        console.log(`${time}: Hozirda ${this.non} ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola mavjud!`);
+    }
+
+    sotish(tovar, miqdor) {
+        const now = new Date();
+        if (tovar === 'non') {
+            if (this.non >= miqdor) {
+                this.non -= miqdor;
+                console.log(`[${now.toLocaleString()}] Sotish: ${miqdor} ta non sotildi.`);
+            } else {
+                console.log(`[${now.toLocaleString()}] Xato: Yetarli miqdor mavjud emas!`);
+            }
+        } else if (tovar === 'lagmon') {
+            if (this.lagmon >= miqdor) {
+                this.lagmon -= miqdor;
+                console.log(`[${now.toLocaleString()}] Sotish: ${miqdor} ta lagmon sotildi.`);
+            } else {
+                console.log(`[${now.toLocaleString()}] Xato: Yetarli miqdor mavjud emas!`);
+            }
+        } else if (tovar === 'cola') {
+            if (this.cola >= miqdor) {
+                this.cola -= miqdor;
+                console.log(`[${now.toLocaleString()}] Sotish: ${miqdor} ta cola sotildi.`);
+            } else {
+                console.log(`[${now.toLocaleString()}] Xato: Yetarli miqdor mavjud emas!`);
+            }
+        } else {
+            console.log(`[${now.toLocaleString()}] Xato: Noto'g'ri mahsulot nomi!`);
+        }
+    }
+    qabul(tovar, miqdor) {
+        const now = new Date();
+        if (tovar === 'non') {
+            this.non += miqdor;
+            console.log(`[${now.toLocaleString()}] Qabul: ${miqdor} ta non qabul qilindi.`);
+        } else if (tovar === 'lagmon') {
+            this.lagmon += miqdor;
+            console.log(`[${now.toLocaleString()}] Qabul: ${miqdor} ta lagmon qabul qilindi.`);
+        } else if (tovar === 'cola') {
+            this.cola += miqdor;
+            console.log(`[${now.toLocaleString()}] Qabul: ${miqdor} ta cola qabul qilindi.`);
+        } else {
+            console.log(`[${now.toLocaleString()}] Xato: Noto'g'ri mahsulot nomi!`);
+        }
+    }
+}
+
+const shop = new Shop(4, 5, 2);  
+
+shop.qoldiq();  
+
+shop.sotish('non', 3);  
+shop.sotish('cola', 1);  
+
+shop.qabul('cola', 4);  
+
+shop.qoldiq();  
+
+
+
+
+
 /* >>>>>>>>>>>>> TASK b >>>>>>>>>>>>>>>>*/
-function countDigits(s) {
+
+/*function countDigits(s) {
     let count = 0;
     for (let i = 0; i < s.length; i++) {
         if (!isNaN(s[i]) && s[i] !== ' ') {
@@ -8,7 +87,7 @@ function countDigits(s) {
     }
     return count;
 }
-console.log(countDigits("ad2a54y79wet0sfgb9"));  // 
+console.log(countDigits("ad2a54y79wet0sfgb9"));  */ 
 
 /* >>>>>>>>>>>>>>>>CALLBACK function>>>>>>>>>>>>>>>>>>>>*/
 
