@@ -1,9 +1,24 @@
+/* >>>>>>>>>>>>> TASK D >>>>>>>>>>>>>>>>*/
+ function soz(soz1, soz2) {
+    if (soz1.length !== soz2.length) {
 
+        return false;
+    }
+    const sorteSoz1 = soz1.split('').sort().join('');
+    const sorteSoz2 = soz2.split('').sort().join('');
+
+    return sorteSoz1 === sorteSoz2;
+
+}
+
+console.log(soz("kofe", "ekof"));
 
 /* >>>>>>>>>>>>> TASK C >>>>>>>>>>>>>>>>*/
 
 //const shop = new shop
 //shop.qoldiq();
+
+/*  
 
 class Shop {
     constructor(non, lagmon, cola) {
@@ -71,7 +86,7 @@ shop.sotish('cola', 1);
 shop.qabul('cola', 4);  
 
 shop.qoldiq();  
-
+*/
 
 
 
