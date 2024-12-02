@@ -1,5 +1,22 @@
+/* >>>>>>>>>>>>> TASK E >>>>>>>>>>>>>>>>
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+*/
+
+function getReverse(str){
+    return str.split("").reverse().join("");
+  }
+  
+  
+  const ourString = getReverse("Mike");
+  console.log(ourString);
+
+
+
 /* >>>>>>>>>>>>> TASK D >>>>>>>>>>>>>>>>*/
- function soz(soz1, soz2) {
+
+ /* function soz(soz1, soz2) {
     if (soz1.length !== soz2.length) {
 
         return false;
@@ -11,7 +28,7 @@
 
 }
 
-console.log(soz("kofe", "ekof"));
+console.log(soz("kofe", "ekof")); */
 
 /* >>>>>>>>>>>>> TASK C >>>>>>>>>>>>>>>>*/
 
