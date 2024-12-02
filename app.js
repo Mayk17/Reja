@@ -48,12 +48,10 @@ app.post("/create-item", (req, res) => {
 
 app.post("/delete-item", (req, res) => {
     const id = req.body.id;
-  //  console.log.apply(id);
-    // res.end("done");
 
     db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id) }, 
     function(err, data) {
-        res.json({state: "success"});
+        res.json({state: "success"}); //API yasab qilindi.
 
     });
 });
@@ -61,11 +59,11 @@ app.post("/delete-item", (req, res) => {
 app.post("/edit-item", (req, res) => {
     const data = req.body;
     console.log(data);
-    db.collection("plans").findOneAndUpdate(
+    db.collection("plans").findOneAndUpdate( // bu edit qilish un kerak boladi.
         { _id: new mongodb.ObjectId(data.id) },
         { $set: { reja: data.new_input} },
         function (err, data) {
-            res.json ({ state: "success"});
+            res.json ({ state: "success"}); // bu date baseda o'zgarganiliki haqida maulomt beradi.
         }
     )
     

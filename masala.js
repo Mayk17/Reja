@@ -1,4 +1,4 @@
-function task (a, b){
+/*function task (a, b){
     const result= a + b;
     return  result.length;
 
@@ -130,5 +130,20 @@ shop.sotish('cola', 1);  // 1 ta cola sotildi
 shop.qabul('cola', 4);  // 4 ta cola qabul qilindi
 
 // Qoldiqni yana ko'rsatish
-shop.qoldiq();  // Hozirda 1ta non, 5ta lagmon va 6ta cola mavjud!
+shop.qoldiq();  // Hozirda 1ta non, 5ta lagmon va 6ta cola mavjud! */
+
+
+function soz(soz1, soz2) {
+    if (soz1.length !== soz2.length) {
+
+        return false;
+    }
+    const sorteSoz1 = soz1.split('').sort().join('');
+    const sorteSoz2 = soz2.split('').sort().join('');
+
+    return sorteSoz1 === sorteSoz2;
+
+}
+
+console.log(soz("kofe", "acadd")); 
 

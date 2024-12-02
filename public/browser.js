@@ -69,12 +69,14 @@ document.addEventListener("click", function (e) {
     // edit oper
 
     if (e.target.classList.contains("edit-me")) {
-       let userInput = prompt(
+       let userInput = prompt(  // o'zgarihni bosganda bizga alertga o'xshagan oyna chiqazib berishi uchun ishlatiladi
         "O'zgartirish kiriting",
         e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
-       );
+       ); // bu yzoilib turgan qismini olish un ishlatiladi
        if (userInput) {
-        axios.post("/edit-item", {
+        axios // axios orqali post qilyapmiz u esa app.postga boradi v yerda database otib malumotni o'zgartiradi 
+        // o'zgartiligan malumot esa stateni  then reponse ga qaytaradi biz uni consolega chiqarmiza.
+        .post("/edit-item", { // bu data object hisoblandi
             id: e.target.getAttribute("data-id"),
             new_input: userInput,
         }).then(response => {
@@ -92,7 +94,7 @@ document.addEventListener("click", function (e) {
 
     document.getElementById("clean-all").addEventListener("click", function () {
         axios.post("/delete-all", { delete_all: true}).then(respose => {
-            alert(respose.data.state);
-            document.location.reload();
+            alert(respose.data.state); // sternitsiyada yengi alert chiqazadi.
+            document.location.reload();  /// bu pageni reload qiladi
         });
     });
